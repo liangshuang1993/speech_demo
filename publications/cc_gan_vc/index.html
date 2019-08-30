@@ -30,9 +30,38 @@
     We compare our method with StarGAN-VC and Adaptive-VC(https://arxiv.org/abs/1904.05742).
     <br>The StarGAN-VC audio samples are converted by a model we trained ourselves. The training code is provided by https://github.com/liusongxiang/StarGAN-Voice-Conversion. 
     <br>The Adaptive-VC audio samples are converted directly by the pretrain model the author provided(https://github.com/jjery2243542/adaptive_voice_conversion).
+    <br>Both Adaptive-VC and our method can use an unseen speaker as target speaker while StarGAN-VC cannot. So we can only use seen speakers in STARGAN-VC as target speaker.
+    <br>Among target speakers below, only P293 and P232 are seen in our training data.
   </b></div>
 
   <div>
+  
+    <h3>P361(Female) -> P229(Female)</h3>
+      <table>
+        <tbody>
+          <tr>
+            <td><span><b>Source speech example</b></td></span>
+            <td><span><b>Target speech example</b></td></span>
+            <td><span><b>StarGAN-VC</b></td></span>
+            <td><span><b>Adaptive-VC</b></td></span>
+            <td><span><b>Proposed</b></td></span>
+          </tr>
+          <tr>
+            <td><audio controls=""><source src="demos/proposed/F2F/p361_075.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="demos/proposed/F2F/p229_005.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="demos/baseline/baseline-stargan/F2F/p361_075-vcto-p229.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="demos/baseline/baseline-adaptive-vc/F2F/361-229-075.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="demos/proposed/F2F/361_229_075.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td><audio controls=""><source src="demos/proposed/F2F/p361_065.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="demos/proposed/F2F/p229_005.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="demos/baseline/baseline-stargan/F2F/p361_065-vcto-p229.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="demos/baseline/baseline-adaptive-vc/F2F/361-229-065.wav" type="audio/wav"></audio></td>
+            <td><audio controls=""><source src="demos/proposed/F2F/361_229_065.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
     <h3>P293(Female) -> P360(Male)</h3>
     <table>
       <tbody>
@@ -114,32 +143,6 @@
       </tbody>
     </table>
 
-    <h3>P361(Female) -> P229(Female)</h3>
-    <table>
-      <tbody>
-        <tr>
-          <td><span><b>Source speech example</b></td></span>
-          <td><span><b>Target speech example</b></td></span>
-          <td><span><b>StarGAN-VC</b></td></span>
-          <td><span><b>Adaptive-VC</b></td></span>
-          <td><span><b>Proposed</b></td></span>
-        </tr>
-        <tr>
-          <td><audio controls=""><source src="demos/proposed/F2F/p361_065.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demos/proposed/F2F/p229_005.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demos/baseline/baseline-stargan/F2F/p361_065-vcto-p229.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demos/baseline/baseline-adaptive-vc/F2F/361-229-065.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demos/proposed/F2F/361_229_065.wav" type="audio/wav"></audio></td>
-        </tr>
-        <tr>
-          <td><audio controls=""><source src="demos/proposed/F2F/p361_075.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demos/proposed/F2F/p229_005.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demos/baseline/baseline-stargan/F2F/p361_075-vcto-p229.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demos/baseline/baseline-adaptive-vc/F2F/361-229-075.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demos/proposed/F2F/361_229_075.wav" type="audio/wav"></audio></td>
-        </tr>
-      </tbody>
-    </table>
 </body>
 
 </html>
